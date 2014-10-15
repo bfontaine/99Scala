@@ -1,3 +1,7 @@
+scoverage.ScoverageSbtPlugin.instrumentSettings
+
+org.scoverage.coveralls.CoverallsPlugin.coverallsSettings
+
 name := "probs99"
 
 version := "1.0"
