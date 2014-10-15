@@ -28,4 +28,8 @@ class P02Spec extends UnitSpec {
     assert(P02.penultimate(myList) == 4)
   }
 
+  it should "work on String lists as well" in {
+    val myList = List("foo", "bar", "qux")
+    assert(P02.penultimate(myList) == "bar")
+  }
 }
