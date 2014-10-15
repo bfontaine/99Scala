@@ -2,6 +2,8 @@ package org.bfn.ninetynineprobs
 
 object P10 {
 
+  type t[T] = List[(Int, T)]
+
   private def myRevMapAcc[A, B](ls : List[A], acc : List[B], fn : (A) => B)
     : List[B] = ls match {
       case Nil => acc
@@ -19,7 +21,7 @@ object P10 {
    * encoded as tuples (N, E) where N is the number of duplicates of the
    * element E.
    **/
-  def encode[T](ls : List[T]) : List[(Int, T)] =
+  def encode[T](ls : List[T]) : t[T] =
     myMap(P09.pack(ls), (l : List[T]) =>
         (P04.length(l), P03.nth(0, l)))
 }
