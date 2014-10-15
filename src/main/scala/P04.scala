@@ -10,7 +10,5 @@ object P04 {
   /**
    * Find the number of elements of a list
    **/
-  def length(ls : List[_]) : Int = {
-    lengthAcc(ls, 0)
-  }
+  def length(ls : List[_]) : Int = lengthAcc(ls, 0)
 }
