@@ -9,7 +9,8 @@ object P10 {
   }
 
   // let's assume we can't use List#map
-  private def myMap[A, B](ls : List[A], fn : (A) => B) =
+  // this is public to be used in P11
+  def myMap[A, B](ls : List[A], fn : (A) => B) =
     P05.reverse(myRevMapAcc(ls, Nil, fn))
 
   /**
