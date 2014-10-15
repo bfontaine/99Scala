@@ -8,7 +8,7 @@ class P06Spec extends UnitSpec {
     assert(P06.isPalindrome(List()))
   }
 
-  it should "return true on an one-element list" in {
+  it should "return true on a one-element list" in {
     assert(P06.isPalindrome(List(2)))
   }
 
