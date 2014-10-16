@@ -9,13 +9,13 @@ object P11 {
    **/
   // ugly: we should use a more specific type than just 'Any'. It should be
   // something like 'List[(Int, T)|T]' (doesn't compile)
-  def encodeModified[T](ls : List[T]) : List[Any] =
+  def encodeModified[T](ls : List[T]) : List[Either[T, (Int, T)]] =
     P10.myMap(P09.pack(ls), (l : List[T]) => {
       val len = P04.length(l)
       val el = P03.nth(0, l)
       if (len == 1)
-        el
+        Left(el)
       else
-        (len, el)
+        Right((len, el))
     })
 }
