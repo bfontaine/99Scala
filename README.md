@@ -5,7 +5,8 @@
 
 This repository contains my solutions to
 [Phil Gold’s 99 Scala Problems list][list]. I’m learning Scala, the code is
-surely far from being perfect.
+surely far from being perfect. Feel free to add comments if you think I’ve done
+something wrong.
 
 [list]: http://aperiodic.net/phil/scala/s-99/
 
