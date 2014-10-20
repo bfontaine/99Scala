@@ -21,5 +21,11 @@ class P26Spec extends UnitSpec {
     val myList = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
     assert(P26.combinations(3, myList).length == 220)
   }
+
+  it should "not remove duplicates" in {
+    val myList = List(2, 2, 2)
+    assert(P26.combinations(2, myList) ==
+      List(List(2, 2), List(2, 2), List(2, 2)))
+  }
 }
 
