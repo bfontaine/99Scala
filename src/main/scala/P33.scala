@@ -2,6 +2,7 @@ package org.bfn.ninetynineprobs
 
 object P33 {
 
-  // TODO
+  def isCoprimeTo(a : Integer, b : Integer) =
+    P32.gcd(a, b) == 1
 
 }
