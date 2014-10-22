@@ -16,6 +16,18 @@ class P21Spec extends UnitSpec {
     assert(P21.insertAt(17, 2, List(3, 2, 1, 0)) == List(3, 2, 17, 1, 0))
   }
 
+  it should "throw an IndexOutOfBoundsException if N<0" in {
+    intercept[IndexOutOfBoundsException] {
+      P21.insertAt(42, -1, List())
+    }
+  }
+
+  it should "throw an IndexOutOfBoundsException if N>list.length" in {
+    intercept[IndexOutOfBoundsException] {
+      P21.insertAt(42, 1000, List(1, 2, 3))
+    }
+  }
+
   it should "work with String lists as well" in {
     assert(P21.insertAt(12, 1, List(1, 2, 3)) == List(1, 12, 2, 3))
   }
